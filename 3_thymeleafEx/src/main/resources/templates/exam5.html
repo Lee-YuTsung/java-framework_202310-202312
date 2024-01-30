@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table width="400" align="center" border="1">
+		<tr align="center">
+			<td colspan="7" th:text="${memberData}"></td>
+		</tr>
+		<tr>
+			<td>id</td>
+			<td>姓名</td>
+			<td>帳號</td>
+			<td>密碼</td>
+			<td>地址</td>
+			<td>電話</td>
+			<td>行動</td>
+		</tr>
+		<tr th:each="member:${members}">
+			<td th:text="${member.id}"></td>
+			<td th:text="${member.name}"></td>
+			<td th:text="${member.username}"></td>
+			<td th:text="${member.password}"></td>
+			<td th:text="${member.address}"></td>
+			<td th:text="${member.phone}"></td>
+			<td th:text="${member.mobile}"></td>
+		</tr>
+	</table>
+</body>
+</html>

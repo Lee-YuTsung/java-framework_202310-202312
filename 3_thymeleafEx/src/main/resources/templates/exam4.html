@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table width="400" align="center" border="1">
+		<tr align="center">
+			<td colspan="3" ></td>
+		</tr>
+		<tr>
+			<td>編號</td>
+			<td>姓名</td>
+			<td>年齡</td>
+		</tr>
+		<tr th:each="user:${list}">
+			<td th:text="${user.id}"></td>
+			<td th:text="${user.name}"></td>
+			<td th:text="${user.age}"></td>
+		</tr>
+	</table>
+</body>
+</html>
